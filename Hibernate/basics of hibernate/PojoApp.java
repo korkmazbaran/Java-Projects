@@ -17,6 +17,7 @@ public class PojoApp {
 		pojo.setDate(date);
 		pojo.setTime(date);
 		pojo.setDateAndTime(date);
+		pojo.setTemporary("temporary");
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
 		session.merge(pojo);

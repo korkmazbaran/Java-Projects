@@ -20,6 +20,24 @@ public class Pojo {
 
 	@Column(name = "VALUE", precision = 15, scale = 2)
 	private BigDecimal value;
+	
+	@Transient
+	private String temporary;
+	
+	@Lob
+	@Column(name = "LARGE_STRİNG")
+	private String LargeString;
+	
+	@Lob
+	@Column(name = "LARGE_BYTE")
+	private byte[] LargeByteLob;
+	
+	@Lob
+	@Column(name = "LARGE_CHAR")
+	private char[] LargeCharLob;
+	
+
+
 
 	@Column(name = "DATE")
 	@Temporal(TemporalType.DATE)
@@ -65,8 +83,6 @@ public class Pojo {
 		this.dateAndTime = dateAndTime;
 	}
 
-	
-
 	public BigDecimal getValue() {
 		return value;
 	}
@@ -82,4 +98,36 @@ public class Pojo {
 	public void setId(Long id) {
 		this.id = id;
 	}
+	public String getTemporary() {
+		return temporary;
+	}
+
+	public void setTemporary(String temporary) {
+		this.temporary = temporary;
+	}
+
+	public String getLargeString() {
+		return LargeString;
+	}
+
+	public void setLargeString(String largeString) {
+		LargeString = largeString;
+	}
+
+	public byte[] getLargeByteLob() {
+		return LargeByteLob;
+	}
+
+	public void setLargeByteLob(byte[] largeByteLob) {
+		LargeByteLob = largeByteLob;
+	}
+
+	public char[] getLargeCharLob() {
+		return LargeCharLob;
+	}
+
+	public void setLargeCharLob(char[] largeCharLob) {
+		LargeCharLob = largeCharLob;
+	}
+	
 }
